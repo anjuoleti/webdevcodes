@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body{
+                width:100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .container{
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .container a{
+                position: relative;
+                width:150px;
+                height:100px;
+                font-size: 30px;
+                background-color: aliceblue;
+                display: inline-block;
+                margin: 20px;
+                text-align: center;
+         
+                
+            }
+            a:nth-child(1):before,a:nth-child(1):after{
+                background:linear-gradient(45deg,rgb(154, 72, 117), rgb(13, 13, 46),yellow);
+
+            }
+            a:before,a:after{
+                content:'';
+               position:absolute;
+                inset:0;
+                background: red;
+                transition: 0.5s;
+                
+            }
+            a:hover:before,a:hover:before{
+                inset:-6px;
+                filter:blur(10px);
+
+                
+                
+            }
+            span{
+                position:absolute;
+                top: 0px;
+                left:0px;
+               width:100%;
+               height:100%;
+                background-color: rgb(13, 13, 46);
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:aliceblue;
+                letter-spacing: 1px;
+                border:1px solid black;
+                overflow: hidden;
+                text-transform: uppercase;
+                
+            }
+            span:before,span:after{
+                content:'';
+                position:absolute;
+                top:0px;
+                left:-50%;
+                width:100%;
+                height: 100%;
+                background-color:rgba(91, 10, 240, 0.075) ;
+                overflow: hidden;
+                transform: skew(25deg);
+                
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a href="#"><span>button</span></a>
+            <a href="#"><span>button</span></a>
+        </div>
+    </body>
+</html>
